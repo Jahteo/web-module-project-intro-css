@@ -103,6 +103,11 @@ nav {
     background: #FFCD69;
     margin-right: 100px;
 }
+
+a:hover {
+    background: darkgray;
+}
+
 /* this was to fix #about offset by complex code way above me. abandonded.
 also considered changing display to table, but also too complex.
 SOLUTION: vertical-align:top;  --> Magic! Then a little margin adjustments & BAM!
@@ -136,6 +141,10 @@ SOLUTION: vertical-align:top;  --> Magic! Then a little margin adjustments & BAM
     text-align: center;
 }
 
+#about:hover {
+    background: rgb(110, 88, 73);
+}
+
 #involve {
     font-size: 1.5rem;
     line-height: 1;
@@ -145,6 +154,24 @@ SOLUTION: vertical-align:top;  --> Magic! Then a little margin adjustments & BAM
 }
 #involve img {
     width: 40%;
+}
+
+#involve img:hover {
+    opacity: .5;
+    animation: nudge 5s linear infinite alternate;
+
+}
+
+@keyframes nudge {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(150px, 0);
+    }
+    80% {
+        transform: translate(-150px, 0);
+    }
 }
 
 footer {
