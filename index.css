@@ -1,0 +1,188 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    /* border: 1px solid grey; */
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End Reset */
+
+/* General Styles */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap'); */
+/* LESSON: Don't import fonts this way. It caused a major conflict where the h1 font was broken. */
+
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size:1.6rem;
+    line-height: 1.5;
+    font-family:'Roboto Mono', monospace;
+}
+
+h1 {
+    font-family:  'Chelsea Market', cursive;
+    font-size: 4rem;
+    letter-spacing: 3px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* Specific Styles */
+
+nav {
+    text-align:center;
+}
+
+ a {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    width: 110px;
+    padding: 2px 10px;
+    margin: 15px 50px;
+    border-radius: 10px;
+}
+
+.plan {
+    background: #FF764A;
+    margin-left: 200px;
+}
+
+.about {
+    background: #5ED3EB;
+}
+
+.involve {
+    background: #FFCD69;
+    margin-right: 100px;
+}
+
+a:hover {
+    background: darkgray;
+}
+
+/* this was to fix #about offset by complex code way above me. abandonded.
+also considered changing display to table, but also too complex.
+SOLUTION: vertical-align:top;  --> Magic! Then a little margin adjustments & BAM!
+} */
+#plan img {
+    display: inline-block;
+    width: 25%;
+    border-radius: 50%;
+    margin: 5% 5%;
+}
+
+#plan section {
+    display: inline-block;
+    width: 50%;
+    /* padding: 5% 5%; */
+    margin: 12% 0% 0%;
+    text-align: center;
+    vertical-align: top;
+}
+#plan section h1 {
+    margin-top: 0;
+}
+/* tried changing from div to section, not sure why its offset down. Not margin either. */
+
+
+#about {
+    background: #DDB9A3;
+    color: white;
+    margin: 5% 5%;
+    padding: 2% 4%;
+    text-align: center;
+}
+
+#about:hover {
+    background: rgb(110, 88, 73);
+}
+
+#involve {
+    font-size: 1.5rem;
+    line-height: 1;
+    width: 31%;
+    margin: 3% auto;
+    text-align: center;
+}
+#involve img {
+    width: 40%;
+}
+
+#involve img:hover {
+    opacity: .5;
+    animation: nudge 5s linear infinite alternate;
+
+}
+
+@keyframes nudge {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(150px, 0);
+    }
+    80% {
+        transform: translate(-150px, 0);
+    }
+}
+
+footer {
+    background: #F9E7DC;
+}
+footer div {
+    width: 100%;
+    height: 25%;
+    overflow: hidden;
+}
+
+footer img {
+    margin: -10% 0 -35% 0;
+}
